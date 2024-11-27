@@ -12,6 +12,7 @@ import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.dummyandroidapp.ui.theme.DummyAndroidAppTheme
@@ -35,11 +36,16 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
+    // Adding Surface -- Just like a container or a box -- Inorder to add background color to it
+    // option + return -> Surround with widget -> Surround with row -> Change Box to Surface ()
+    Surface (color = Color.Cyan) {
+        // The above argument sets the background color of the Surface to cyan.
         Text(
             text = "Hello $name!",
             // Adding padding to the greeting container
             modifier = modifier.padding(50.dp)
         )
+    }
     }
 
 @Preview(showBackground = true)
